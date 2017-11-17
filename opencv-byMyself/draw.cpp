@@ -5,9 +5,14 @@
  circle, 
  fillPoly
 */
+
+#include<iostream>
 #include<opencv2\core\core.hpp>
+#include <opencv2\highgui\highgui.hpp>
+
 #define WINDOW_WIDTH 600  //定义窗口大小的宏，如何控制窗口的大小？
 
+using namespace std;
 using namespace cv;
 
 // 不同角度，相同尺寸的椭圆
@@ -106,6 +111,10 @@ void drawAtom(Mat &img)
 	// 绘制圆心,实心圆
 	DrawFilledCircle(img, Point (WINDOW_WIDTH/2,WINDOW_WIDTH/2));
 
+	imshow("原子示例图", img);
+	
+	waitKey(0);
+
 }
 
 // 【2】绘制组合图
@@ -136,6 +145,9 @@ void drawRook(Mat &img)
 		Point(3 * WINDOW_WIDTH / 4, 7 * WINDOW_WIDTH / 8),
 		Point(3 * WINDOW_WIDTH / 4, WINDOW_WIDTH));
 
+	imshow("组合图", img);
+	waitKey(0);
+	
 }
 
 

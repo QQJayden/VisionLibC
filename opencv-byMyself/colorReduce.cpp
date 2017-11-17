@@ -25,6 +25,9 @@ void colorReduce1(Mat& inputImage, Mat& outputImage, int div)
 		}
 
 	}
+
+	imshow("CoclorReduce1", outputImage);
+	waitKey(0);
 }
 
 // 方法2 用迭代器操作图像 (STL)
@@ -44,6 +47,8 @@ void colorReduce2(Mat& inputImage, Mat& outputImage, int div)
 		(*it)[1] = (*it)[1] / div*div + div / 2;
 		(*it)[2] = (*it)[2] / div*div + div / 2;
 	}
+	imshow("CoclorReduce2", outputImage);
+	waitKey(0);
 }
 
 // 方法3 动态地址计算,配合at
@@ -64,6 +69,8 @@ void colorReduce3(Mat& inputImage, Mat& outputImage, int div)
 			outputImage.at<Vec3b>(i, j)[2] = outputImage.at<Vec3b>(i, j)[2] / div*div + div / 2; //红色通道
 		}
 	}
+	imshow("CoclorReduce3", outputImage);
+	waitKey(0);
 }
 
 

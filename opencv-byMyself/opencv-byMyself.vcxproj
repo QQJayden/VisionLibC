@@ -80,11 +80,13 @@
   <ItemGroup>
     <ClCompile Include="colorReduce.cpp" />
     <ClCompile Include="draw.cpp" />
+    <ClCompile Include="myfeature2d.cpp" />
     <ClCompile Include="main.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="colorReduce.h" />
     <ClInclude Include="draw.h" />
+    <ClInclude Include="myfeature2d.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
